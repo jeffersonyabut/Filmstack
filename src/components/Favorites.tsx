@@ -36,14 +36,14 @@ export default function Favorites() {
   return (
     <div className="mt-10">
       <h1 className="font-bold text-text">FAVORITES</h1>
-      <div className="overflow-x-auto w-full h-full  whitespace-nowrap scrollbar-hide">
+      <div className="overflow-x-auto w-full h-full whitespace-nowrap  scrollbar-thin">
         {movies.map((movie, index) => (
           <>
             <span key={index} className="inline-block">
               <img
                 src={movie}
                 alt=""
-                className="h-64"
+                className="h-64 xl:h-96"
                 onClick={() => setOpenIndex(index)}
                 key={index}
               />

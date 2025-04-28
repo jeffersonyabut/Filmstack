@@ -21,20 +21,23 @@ export default function FavoriteTwo() {
     <div className="mt-5">
       <div className="overflow-x-auto w-full h-full whitespace-nowrap scrollbar-hide">
         {movies.map((movie, index) => (
-          <button onClick={() => setOpenIndex(index)} key={index}>
+          <>
+            {" "}
             <span key={index} className="inline-block">
-              <img src={movie} alt="" className="h-64" />
+              <img
+                src={movie}
+                alt=""
+                className="h-64 xl:h-96"
+                onClick={() => setOpenIndex(index)}
+              />
             </span>
             <Popup
               isOpen={openIndex === index}
               onClose={() => setOpenIndex(null)}
             >
-              <p key={index}>
-                {descriptions[index]}
-                {index}
-              </p>
+              <p key={index}>{descriptions[index]}</p>
             </Popup>
-          </button>
+          </>
         ))}
       </div>
     </div>
