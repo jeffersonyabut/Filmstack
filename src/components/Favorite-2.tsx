@@ -28,7 +28,6 @@ export default function FavoriteTwo() {
             <Popup
               isOpen={openIndex === index}
               onClose={() => setOpenIndex(null)}
-              key={index}
             >
               <p key={index}>
                 {descriptions[index]}

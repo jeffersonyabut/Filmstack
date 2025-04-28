@@ -28,8 +28,9 @@ export default function Popup({ isOpen, onClose, children }: graphicTypes) {
               onClick={onClose}
               className="absolute top-2 right-3 text-gray-500 dark:text-darkText hover:text-gray-800"
             >
-              ✕
+              Close
             </button>
+
             {children}
           </div>
         </div>
