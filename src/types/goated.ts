@@ -9,3 +9,10 @@ export type ScrollsProps = {
   scrollRight: () => void;
   children: React.ReactNode;
 };
+
+export type Movie = {
+  src: string;
+  title: string;
+  rating: string;
+  description: string;
+};

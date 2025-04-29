@@ -1,24 +1,20 @@
-import movie1 from "/images/bridge.jpg";
-import movie2 from "/images/theparent.jpg";
-import movie3 from "/images/flipped.jpg";
-import movie4 from "/images/thespace.jpg";
-import movie5 from "/images/midnight.jpg";
-import movie6 from "/images/proposal.jpg";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Popup from "../modal/Popup";
 import Scrolls from "../modal/Scrolls";
+import { motion } from "motion/react";
+import { Movie } from "../types/goated";
 
 export default function FavoriteTwo() {
   const refTwo = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<null | number>(null);
-  const movies: string[] = [movie1, movie2, movie3, movie4, movie5, movie6];
-  const descriptions: string[] = [
-    "A bridge between two worlds.",
-    "A tale of love and family.",
-    "A journey of self-discovery.",
-    "An adventure beyond the stars.",
-    "A night of unexpected encounters.",
-  ];
+  const [movies, setMovies] = useState<Movie[]>([]);
+
+  useEffect(() => {
+    fetch("/movies.json")
+      .then((res) => res.json())
+      .then((data) => setMovies(data.slice(10, 20)))
+      .catch((err) => console.error("Failed to load movies:", err));
+  }, []);
 
   const scrollLeft = () => {
     if (refTwo.current) {
@@ -32,31 +28,41 @@ export default function FavoriteTwo() {
     }
   };
 
+  const preventDefault = (e: React.MouseEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="relative mt-2 xl:flex xl:flex-row ">
       <Scrolls scrollLeft={scrollLeft} scrollRight={scrollRight}>
         <div
           ref={refTwo}
           className="overflow-x-auto w-full h-full whitespace-nowrap  xl:scrollbar-hide"
+          style={{ scrollBehavior: "smooth" }}
         >
           {movies.map((movie, index) => (
-            <>
-              {" "}
-              <span key={index} className="inline-block">
-                <img
-                  src={movie}
-                  alt=""
-                  className="h-64 xl:h-96 ml-1 mr-1 rounded-md hover:border hover:p-2 hover:rounded-md"
-                  onClick={() => setOpenIndex(index)}
-                />
-              </span>
+            <span key={index} className="inline-block">
+              <motion.img
+                src={movie.src}
+                className="h-64 xl:h-96 ml-1 mr-1 rounded-md hover:p-2 hover:rounded"
+                onClick={() => setOpenIndex(index)}
+                whileHover={{ scale: 0.95 }}
+                onContextMenu={preventDefault}
+              />
               <Popup
                 isOpen={openIndex === index}
                 onClose={() => setOpenIndex(null)}
               >
-                <p key={index}>{descriptions[index]}</p>
+                <div className="flex flex-col xl:flex-row items-center">
+                  <img src={movie.src} className="w-60" alt="" />
+                  <div className="w-64 xl:w-72  xl:h-72 p-2">
+                    <h1 className="font-bold">{movie.title}</h1>
+                    <h3 className="font-bold">{movie.rating}</h3>
+                    <p className="ml-1">{movie.description}</p>
+                  </div>
+                </div>
               </Popup>
-            </>
+            </span>
           ))}
         </div>
       </Scrolls>

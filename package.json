@@ -1,5 +1,6 @@
 {
   "name": "letterboxd",
+  "homepage": "https://epoymadness.github.io/Filmstack/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,9 +8,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "motion": "^12.9.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-scrollbar-hide": "^2.0.0"

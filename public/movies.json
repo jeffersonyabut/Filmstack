@@ -1,0 +1,98 @@
+[
+  {
+    "src": "/images/notting.jpg",
+    "title": "Notting Hill",
+    "rating": "10",
+    "description": "Idol ko here si hugh grant "
+  },
+  {
+    "src": "/images/13goingon30.jpg",
+    "title": "13 Going On 30",
+    "rating": "10",
+    "description": "A romantic drama."
+  },
+  {
+    "src": "/images/10things.jpg",
+    "title": "10 Things I Hate About You",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/shes.jpg",
+    "title": "She's All That",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/cinderella.jpg",
+    "title": "A Cinderella Story",
+    "rating": "10",
+    "description": "A romantic drama."
+  },
+  {
+    "src": "/images/awalk.jpg",
+    "title": "A Walk to Remember",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/pride.jpg",
+    "title": "Pride and Prejudice",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/500.jpg",
+    "title": "(500) Days of Summer",
+    "rating": "10",
+    "description": "A romantic drama."
+  },
+  {
+    "src": "/images/howtolose.jpg",
+    "title": "How to Lose a Guy in 10 Days",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/eternal.jpg",
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/flipped.jpg",
+    "title": "Flipped",
+    "rating": "10",
+    "description": "A romantic drama."
+  },
+  {
+    "src": "/images/theparent.jpg",
+    "title": "The Parent Trap",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/bridge.jpg",
+    "title": "Bridge to Terabithia",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/proposal.jpg",
+    "title": "The Proposal",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/midnight.jpg",
+    "title": "Midnight Sun",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  },
+  {
+    "src": "/images/thespace.jpg",
+    "title": "The Space Between Us",
+    "rating": "10",
+    "description": "An action-packed adventure."
+  }
+]

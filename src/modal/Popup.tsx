@@ -22,7 +22,7 @@ export default function Popup({ isOpen, onClose, children }: graphicTypes) {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 backdrop-blur-sm">
           <div
             ref={modalRef}
-            className="bg-white dark:bg-gray-700 rounded-2xl p-6 max-w-md w-full relative h-max overflow-y-auto text-text"
+            className="bg-white dark:bg-gray-700 rounded-2xl p-6 xl:w-max w-full relative h-max overflow-y-auto text-text"
           >
             <button
               onClick={onClose}
