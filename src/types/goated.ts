@@ -3,3 +3,9 @@ export type graphicTypes = {
   onClose: () => void;
   children: React.ReactNode;
 };
+
+export type ScrollsProps = {
+  scrollLeft: () => void;
+  scrollRight: () => void;
+  children: React.ReactNode;
+};

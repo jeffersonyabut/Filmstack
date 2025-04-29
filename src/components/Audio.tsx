@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Play from "../icons/Play";
 import Pause from "../icons/Pause";
 
@@ -16,6 +16,20 @@ export default function Audio() {
       }
     }
   };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+
+    const handleEnded = () => {
+      setIsPlaying(false);
+    };
+
+    audio?.addEventListener("ended", handleEnded);
+
+    return () => {
+      audio?.removeEventListener("ended", handleEnded);
+    };
+  }, []);
 
   const handlePlay = () => {
     setIsPlaying((prev) => !prev);
