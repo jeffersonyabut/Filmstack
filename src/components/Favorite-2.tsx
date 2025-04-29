@@ -1,4 +1,10 @@
-import { useState, useRef, useEffect } from "react";
+import movie1 from "/images/flipped.jpg";
+import movie2 from "/images/theparent.jpg";
+import movie3 from "/images/bridge.jpg";
+import movie4 from "/images/proposal.jpg";
+import movie5 from "/images/midnight.jpg";
+import movie6 from "/images/thespace.jpg";
+import { useState, useRef } from "react";
 import Popup from "../modal/Popup";
 import Scrolls from "../modal/Scrolls";
 import { motion } from "motion/react";
@@ -7,14 +13,45 @@ import { Movie } from "../types/goated";
 export default function FavoriteTwo() {
   const refTwo = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<null | number>(null);
-  const [movies, setMovies] = useState<Movie[]>([]);
 
-  useEffect(() => {
-    fetch("/movies.json")
-      .then((res) => res.json())
-      .then((data) => setMovies(data.slice(10, 20)))
-      .catch((err) => console.error("Failed to load movies:", err));
-  }, []);
+  const movies: Movie[] = [
+    {
+      src: movie1,
+      title: "Flipped",
+      rating: "10",
+      description: "A romantic drama.",
+    },
+    {
+      src: movie2,
+      title: "The Parent Trap",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie3,
+      title: "Bridge to Terabithia",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie4,
+      title: "The Proposal",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie5,
+      title: "Midnight Sun",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie6,
+      title: "The Space Between Us",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+  ];
 
   const scrollLeft = () => {
     if (refTwo.current) {

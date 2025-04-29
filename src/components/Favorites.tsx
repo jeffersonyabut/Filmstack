@@ -1,4 +1,15 @@
-import { useState, useRef, useEffect } from "react";
+import movie1 from "/images/notting.jpg";
+import movie2 from "/images/13goingon30.jpg";
+import movie3 from "/images/10things.jpg";
+import movie4 from "/images/shes.jpg";
+import movie5 from "/images/cinderella.jpg";
+import movie6 from "/images/awalk.jpg";
+import movie7 from "/images/pride.jpg";
+import movie8 from "/images/500.jpg";
+import movie9 from "/images/howtolose.jpg";
+import movie10 from "/images/eternal.jpg";
+
+import { useState, useRef } from "react";
 import Popup from "../modal/Popup";
 import Scrolls from "../modal/Scrolls";
 import { motion } from "motion/react";
@@ -6,15 +17,70 @@ import { Movie } from "../types/goated";
 
 export default function Favorites() {
   const ref = useRef<HTMLDivElement>(null);
-  const [movies, setMovies] = useState<Movie[]>([]);
   const [openIndex, setOpenIndex] = useState<null | number>(null);
 
-  useEffect(() => {
-    fetch("/movies.json")
-      .then((res) => res.json())
-      .then((data) => setMovies(data.slice(0, 10)))
-      .catch((err) => console.error("Failed to load movies:", err));
-  }, []);
+  const movies: Movie[] = [
+    {
+      src: movie1,
+      title: "Notting Hill",
+      rating: "10",
+      description: "Idol ko here si hugh grant ",
+    },
+    {
+      src: movie2,
+      title: "13 Going On 30",
+      rating: "10",
+      description: "A romantic drama.",
+    },
+    {
+      src: movie3,
+      title: "10 Things I Hate About You",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie4,
+      title: "She's All That",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie5,
+      title: "A Cinderella Story",
+      rating: "10",
+      description: "A romantic drama.",
+    },
+    {
+      src: movie6,
+      title: "A Walk to Remember",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie7,
+      title: "Pride and Prejudice",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie8,
+      title: "(500) Days of Summer",
+      rating: "10",
+      description: "A romantic drama.",
+    },
+    {
+      src: movie9,
+      title: "How to Lose a Guy in 10 Days",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+    {
+      src: movie10,
+      title: "Eternal Sunshine of the Spotless Mind",
+      rating: "10",
+      description: "An action-packed adventure.",
+    },
+  ];
 
   const scrollLeft = () => {
     if (ref.current) {

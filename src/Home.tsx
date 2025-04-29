@@ -22,12 +22,16 @@ export default function Home() {
           <a
             href="
           https://www.instagram.com/epoymadness/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <Instagram />
           </a>
           <a
             href="https://www.instagram.com/epoymadness/"
             className="text-text"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             epoymadness
           </a>

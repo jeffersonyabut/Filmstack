@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import there from "/thereshegoes.mp3";
 import Play from "../icons/Play";
 import Pause from "../icons/Pause";
 
@@ -39,7 +40,7 @@ export default function Audio() {
   return (
     <div className="mt-10">
       <audio ref={audioRef} controls className="hidden">
-        <source src="/thereshegoes.mp3" type="audio/mpeg" />
+        <source src={there} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <button onClick={handlePlay}>{isPlaying ? <Pause /> : <Play />}</button>
