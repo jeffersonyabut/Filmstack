@@ -24,32 +24,32 @@ export default function FavoriteTwo() {
     {
       src: movie2,
       title: "The Parent Trap",
-      rating: "10",
+      rating: "10/10",
       description: "childhood crush ko si lindsay lohan",
     },
     {
       src: movie3,
       title: "Bridge to Terabithia",
-      rating: "10",
+      rating: "10/10",
       description:
         "Next time, we should invite leslie to go. She'd like that. </3",
     },
     {
       src: movie4,
       title: "The Proposal",
-      rating: "10",
+      rating: "10/10",
       description: "truly romcom",
     },
     {
       src: movie5,
       title: "Midnight Sun",
-      rating: "10",
+      rating: "10/10",
       description: "kaiyak to",
     },
     {
       src: movie6,
       title: "The Space Between Us",
-      rating: "10",
+      rating: "10/10",
       description: "fav, i love dystopian movies",
     },
   ];
