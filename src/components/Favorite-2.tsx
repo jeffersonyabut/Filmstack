@@ -19,37 +19,38 @@ export default function FavoriteTwo() {
       src: movie1,
       title: "Flipped",
       rating: "10",
-      description: "A romantic drama.",
+      description: "how could she sit there and laugh and look so beautiful?",
     },
     {
       src: movie2,
       title: "The Parent Trap",
       rating: "10",
-      description: "An action-packed adventure.",
+      description: "childhood crush ko si lindsay lohan",
     },
     {
       src: movie3,
       title: "Bridge to Terabithia",
       rating: "10",
-      description: "An action-packed adventure.",
+      description:
+        "Next time, we should invite leslie to go. She'd like that. </3",
     },
     {
       src: movie4,
       title: "The Proposal",
       rating: "10",
-      description: "An action-packed adventure.",
+      description: "truly romcom",
     },
     {
       src: movie5,
       title: "Midnight Sun",
       rating: "10",
-      description: "An action-packed adventure.",
+      description: "kaiyak to",
     },
     {
       src: movie6,
       title: "The Space Between Us",
       rating: "10",
-      description: "An action-packed adventure.",
+      description: "fav, i love dystopian movies",
     },
   ];
 
@@ -91,11 +92,20 @@ export default function FavoriteTwo() {
                 onClose={() => setOpenIndex(null)}
               >
                 <div className="flex flex-col xl:flex-row items-center">
-                  <img src={movie.src} className="w-60" alt="" />
-                  <div className="w-64 xl:w-72  xl:h-72 p-2">
-                    <h1 className="font-bold">{movie.title}</h1>
-                    <h3 className="font-bold">{movie.rating}</h3>
-                    <p className="ml-1">{movie.description}</p>
+                  <img
+                    src={movie.src}
+                    className="w-60"
+                    alt=""
+                    onContextMenu={preventDefault}
+                  />
+                  <div className="w-64 flex flex-col justify-center text-left  h-full xl:w-72  xl:h-72 pl-2">
+                    <h1 className="font-bold mt-1">{movie.title}</h1>
+                    <h3 className="font-bold tracking-tighter">
+                      {movie.rating}
+                    </h3>
+                    <p className="h-max text-wrap mt-10 tracking-tight leading-4-1">
+                      {movie.description}
+                    </p>
                   </div>
                 </div>
               </Popup>
