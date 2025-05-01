@@ -104,7 +104,7 @@ export default function Favorites() {
 
   return (
     <>
-      <h1 className=" font-bold text-text bord p-5">FAVORITES</h1>
+      <h1 className=" font-bold text-text border-b p-5">FAVORITES</h1>
       <div className="relative mt-2 xl:flex xl:flex-row p-5">
         <Scrolls scrollLeft={scrollLeft} scrollRight={scrollRight}>
           <div

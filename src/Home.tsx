@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="h-max w-full xl:w-full bg-gradient-to-b from-gray-900 to-gray-800">
       <Background />
-      <div className=" text-white w-full flex flex-col  items-center border-b">
+      <div className=" text-white w-full flex flex-col  items-center ">
         <img
           src={profile}
           alt="profile"
