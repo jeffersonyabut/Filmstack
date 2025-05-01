@@ -1,6 +1,6 @@
 const Instagram = () => (
   <svg
-    className="stroke-text stroke-2 fill-none w-10 "
+    className="stroke-text stroke-2 fill-none w-8 "
     viewBox="0 0 48 48"
     id="Layer_2"
     data-name="Layer 2"

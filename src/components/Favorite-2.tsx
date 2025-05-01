@@ -71,18 +71,18 @@ export default function FavoriteTwo() {
   };
 
   return (
-    <div className="relative mt-2 xl:flex xl:flex-row ">
+    <div className="relative mt-2 xl:flex xl:flex-row p-5 ">
       <Scrolls scrollLeft={scrollLeft} scrollRight={scrollRight}>
         <div
           ref={refTwo}
-          className="overflow-x-auto w-full h-full whitespace-nowrap  xl:scrollbar-hide"
+          className="overflow-x-auto w-full h-full whitespace-nowrap   xl:scrollbar-hide"
           style={{ scrollBehavior: "smooth" }}
         >
           {movies.map((movie, index) => (
             <span key={index} className="inline-block">
               <motion.img
                 src={movie.src}
-                className="h-64 xl:h-96 ml-1 mr-1 rounded-md hover:p-2 hover:rounded"
+                className="h-40 xl:h-96 ml-1 mr-5 rounded-md hover:p-2 hover:rounded grayscale border"
                 onClick={() => setOpenIndex(index)}
                 whileHover={{ scale: 0.95 }}
                 onContextMenu={preventDefault}

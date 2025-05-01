@@ -104,8 +104,8 @@ export default function Favorites() {
 
   return (
     <>
-      <h1 className=" font-bold text-text bord">FAVORITES</h1>
-      <div className="relative mt-2 xl:flex xl:flex-row">
+      <h1 className=" font-bold text-text bord p-5">FAVORITES</h1>
+      <div className="relative mt-2 xl:flex xl:flex-row p-5">
         <Scrolls scrollLeft={scrollLeft} scrollRight={scrollRight}>
           <div
             className="overflow-x-auto w-full h-full whitespace-nowrap  xl:scrollbar-hide"
@@ -117,7 +117,7 @@ export default function Favorites() {
                 <motion.img
                   src={movie.src}
                   alt=""
-                  className="h-64 xl:h-96 ml-1 mr-1 rounded-md hover:p-2 hover:rounded"
+                  className="h-40 xl:h-96 ml-1 mr-5 rounded-md hover:p-2 hover:rounded grayscale border"
                   onClick={() => setOpenIndex(index)}
                   whileHover={{ scale: 0.95 }}
                   onContextMenu={handleContextMenu}
