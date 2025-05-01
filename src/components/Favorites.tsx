@@ -18,7 +18,6 @@ import { Movie } from "../types/goated";
 export default function Favorites() {
   const ref = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<null | number>(null);
-  const [loading, setLoading] = useState(false);
 
   const movies: Movie[] = [
     {
@@ -115,9 +114,6 @@ export default function Favorites() {
           >
             {movies.map((movie, index) => (
               <span key={index} className="inline-block">
-                {loading && (
-                  <div className="h-40 xl:h-96 ml-1 mr-5 rounded-md animate-pulse border bg-gradient-to-b from-slate-200 to-slate-800"></div>
-                )}
                 <motion.img
                   src={movie.src}
                   alt=""
@@ -125,7 +121,6 @@ export default function Favorites() {
                   onClick={() => setOpenIndex(index)}
                   whileHover={{ scale: 0.95 }}
                   onContextMenu={handleContextMenu}
-                  onLoad={() => setLoading(false)}
                 />
                 <Popup
                   isOpen={openIndex === index}
