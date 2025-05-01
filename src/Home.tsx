@@ -4,6 +4,7 @@ import Favorites from "./components/Favorites";
 import FavoriteTwo from "./components/Favorite-2";
 import Audio from "./components/Audio";
 import Background from "./components/Background";
+import Loading from "./components/Loading";
 
 export default function Home() {
   const dis = (e: React.MouseEvent) => {
@@ -42,6 +43,7 @@ export default function Home() {
       </div>
       <Favorites />
       <FavoriteTwo />
+      <Loading />
     </div>
   );
 }
