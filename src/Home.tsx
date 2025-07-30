@@ -16,7 +16,7 @@ export default function Home() {
           className="rounded-full w-32 mt-12 xl:w-60"
           onContextMenu={dis}
         />
-        <div className=" w-32 flex-row flex items-center justify-between mt-10">
+        <div className=" w-24 flex-row flex items-center justify-between mt-10">
           <a
             href="
           https://www.instagram.com/jeffszine/"
