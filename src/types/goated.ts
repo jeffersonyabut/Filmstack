@@ -12,7 +12,5 @@ export type ScrollsProps = {
 
 export type Movie = {
   src: string;
-  title: string;
   rating: string;
-  description: string;
 };

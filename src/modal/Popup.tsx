@@ -19,14 +19,14 @@ export default function Popup({ isOpen, onClose, children }: graphicTypes) {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 z-50 backdrop-blur-sm">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 backdrop-blur-sm">
           <div
             ref={modalRef}
-            className="bg-background rounded-2xl p-6 xl:w-max w-screen relative h-max text-text"
+            className="bg-background rounded-2xl p-6 xl:w-max w-screen relative h-max text-text drop-shadow-lg"
           >
             <button
               onClick={onClose}
-              className="absolute top-2 right-3 text-gray-500 dark:text-darkText hover:text-gray-800"
+              className="absolute top-2 right-3 text-text dark:text-darkText hover:text-gray-800"
             >
               Close
             </button>
