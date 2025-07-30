@@ -19,19 +19,19 @@ export default function Home() {
         <div className=" w-32 flex-row flex items-center justify-between mt-10">
           <a
             href="
-          https://www.instagram.com/wreckitjeff/"
+          https://www.instagram.com/jeffszine/"
             rel="noopener noreferrer"
             target="_blank"
           >
             <Instagram />
           </a>
           <a
-            href="https://www.instagram.com/wreckitjeff/"
+            href="https://www.instagram.com/jeffszine/"
             className="text-sm text-text tracking-wide font-helvetica"
             rel="noopener noreferrer"
             target="_blank"
           >
-            wreckitjeff
+            jeffszine
           </a>
         </div>
       </div>

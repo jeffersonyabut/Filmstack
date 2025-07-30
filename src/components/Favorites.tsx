@@ -1,5 +1,6 @@
 import movie1 from "/images/Flow.jpg";
 import movie2 from "/images/WildRobot.jpg";
+import movie3 from "/images/Elemental.jpg";
 
 import { useState, useRef } from "react";
 import Popup from "../modal/Popup";
@@ -19,6 +20,10 @@ export default function Favorites() {
     {
       src: movie2,
       rating: "9.5",
+    },
+    {
+      src: movie3,
+      rating: "10",
     },
   ];
 
@@ -67,7 +72,7 @@ export default function Favorites() {
                   <div className="flex flex-col  items-center justify-center">
                     <img
                       src={movie.src}
-                      className="w-60 rounded-md"
+                      className="w-60 rounded-md drop-shadow-lg"
                       alt=""
                       onContextMenu={handleContextMenu}
                     />
