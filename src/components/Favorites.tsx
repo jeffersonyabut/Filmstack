@@ -1,6 +1,9 @@
 import movie1 from "/images/Flow.jpg";
 import movie2 from "/images/WildRobot.jpg";
 import movie3 from "/images/Elemental.jpg";
+import movie4 from "/images/Eli.jpg";
+import movie5 from "/images/Raya.jpg";
+import movie6 from "/images/Dinosaur.jpg";
 
 import { useState, useRef } from "react";
 import Popup from "../modal/Popup";
@@ -23,6 +26,18 @@ export default function Favorites() {
     },
     {
       src: movie3,
+      rating: "10",
+    },
+    {
+      src: movie4,
+      rating: "10",
+    },
+    {
+      src: movie5,
+      rating: "8.5",
+    },
+    {
+      src: movie6,
       rating: "10",
     },
   ];
