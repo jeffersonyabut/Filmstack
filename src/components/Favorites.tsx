@@ -6,9 +6,9 @@ import movie5 from "/images/Raya.jpg";
 import movie6 from "/images/Dinosaur.jpg";
 
 import { useState, useRef } from "react";
+import ImageLoader from "./ImageLoader";
 import Popup from "../modal/Popup";
 import Scrolls from "../modal/Scrolls";
-import { motion } from "motion/react";
 import { Movie } from "../types/goated";
 
 export default function Favorites() {
@@ -60,7 +60,7 @@ export default function Favorites() {
 
   return (
     <>
-      <h1 className=" font-semibold font-helvetica text-text border-b p-5 mt-10">
+      <h1 className=" font-semibold font-helvetica text-text border-b pl-3 m-3 mt-24 text-base">
         FAVOURITE
       </h1>
       <div className="relative mt-2 xl:flex xl:flex-row p-5 xl:h-3/6">
@@ -72,12 +72,11 @@ export default function Favorites() {
           >
             {movies.map((movie, index) => (
               <span key={index} className="inline-block">
-                <motion.img
+                <ImageLoader
                   src={movie.src}
                   alt=""
                   className="h-40 xl:h-96 ml-1 mr-5 rounded-md hover:p-2 hover:rounded drop-shad"
                   onClick={() => setOpenIndex(index)}
-                  whileHover={{ scale: 0.95 }}
                   onContextMenu={handleContextMenu}
                 />
                 <Popup

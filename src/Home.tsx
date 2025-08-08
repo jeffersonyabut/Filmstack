@@ -22,6 +22,7 @@ export default function Home() {
           https://www.instagram.com/jeffszine/"
             rel="noopener noreferrer"
             target="_blank"
+            onContextMenu={dis}
           >
             <Instagram />
           </a>
@@ -30,6 +31,7 @@ export default function Home() {
             className="text-sm text-text tracking-wide font-helvetica"
             rel="noopener noreferrer"
             target="_blank"
+            onContextMenu={dis}
           >
             jeffszine
           </a>
