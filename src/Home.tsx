@@ -5,7 +5,7 @@ import Favorites from "./components/Favorites";
 import ImageLoader from "./components/ImageLoader";
 
 export default function Home() {
-  const [lastActive, setLastActive] = useState<string | null | number>(null);
+  const [lastActive, setLastActive] = useState<string | null>(null);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -22,13 +22,15 @@ export default function Home() {
           const diff = (now.getTime() - lastEvent.getTime()) / (1000 * 60); // in minutes
           setIsActive(diff < 60);
           const active = Math.round(diff);
+          console.log(active);
           let hour = 60;
-          while (active >= hour) {
+
+          while (active > hour) {
             hour += 60;
           }
           const finalForm = hour / 60;
           setLastActive(
-            `Active ${finalForm} hour${finalForm > 1 ? "s" : ""} ago`
+            `Active ${finalForm - 1} hour${finalForm > 1 ? "s" : ""} ago`
           );
         }
       } catch (err) {

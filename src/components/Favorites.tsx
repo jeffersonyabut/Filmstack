@@ -70,7 +70,7 @@ export default function Favorites() {
           >
             {movies.map((movie, index) => (
               <Mapping
-                containerClass="h-40 xl:h-96 ml-1 mr-5 rounded-md hover:p-2 hover:rounded drop-shadow border flex items-center justify-center "
+                containerClass="h-40 xl:h-96 ml-1 mr-5 rounded-md hover:p-2 hover:rounded drop-shadow flex items-center justify-center "
                 src={movie.src}
                 rating={movie.rating}
                 index={index}
