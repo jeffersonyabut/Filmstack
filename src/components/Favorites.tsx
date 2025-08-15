@@ -5,15 +5,13 @@ import movie4 from "/images/Eli.jpg";
 import movie5 from "/images/Raya.jpg";
 import movie6 from "/images/Dinosaur.jpg";
 
-import { useState, useRef } from "react";
-import ImageLoader from "./ImageLoader";
-import Popup from "../modal/Popup";
+import { useRef } from "react";
 import Scrolls from "../modal/Scrolls";
 import { Movie } from "../types/goated";
+import Mapping from "./Mapping";
 
 export default function Favorites() {
   const ref = useRef<HTMLDivElement>(null);
-  const [openIndex, setOpenIndex] = useState<null | number>(null);
 
   const movies: Movie[] = [
     {
@@ -71,33 +69,14 @@ export default function Favorites() {
             style={{ scrollBehavior: "smooth" }}
           >
             {movies.map((movie, index) => (
-              <span key={index} className="inline-block">
-                <ImageLoader
-                  src={movie.src}
-                  alt=""
-                  className="h-40 xl:h-96 ml-1 mr-5 rounded-md hover:p-2 hover:rounded drop-shad"
-                  onClick={() => setOpenIndex(index)}
-                  onContextMenu={handleContextMenu}
-                />
-                <Popup
-                  isOpen={openIndex === index}
-                  onClose={() => setOpenIndex(null)}
-                >
-                  <div className="flex flex-col  items-center justify-center">
-                    <img
-                      src={movie.src}
-                      className="w-60 rounded-md drop-shadow-lg"
-                      alt=""
-                      onContextMenu={handleContextMenu}
-                    />
-                    <div className="w-64 flex flex-col justify-center text-left  h-full xl:w-72  pl-2 ">
-                      <h3 className="font-semibold tracking-tighter border-t mt-5 xl:border-t-0 font-helvetica">
-                        {movie.rating}
-                      </h3>
-                    </div>
-                  </div>
-                </Popup>
-              </span>
+              <Mapping
+                containerClass="h-40 xl:h-96 ml-1 mr-5 rounded-md hover:p-2 hover:rounded drop-shadow border flex items-center justify-center "
+                src={movie.src}
+                rating={movie.rating}
+                index={index}
+                key={index}
+                handleContextMenu={handleContextMenu}
+              ></Mapping>
             ))}
           </div>
         </Scrolls>

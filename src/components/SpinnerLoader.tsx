@@ -1,19 +1,11 @@
-import { useState, useEffect } from "react";
 import { ClipLoader } from "react-spinners";
-export default function SpinnerLoader() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+import { ImageLoaderProps } from "../types/goated";
+export default function SpinnerLoader({ containerClass }: ImageLoaderProps) {
   return (
     <>
-      <ClipLoader color="#b4b4b4" loading={loading} speedMultiplier={0.5} />
+      <div className={containerClass}>
+        <ClipLoader color="#b4b4b4" speedMultiplier={0.5} />
+      </div>
     </>
   );
 }

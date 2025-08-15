@@ -11,14 +11,18 @@ export type ScrollsProps = {
 };
 
 export type Movie = {
+  index?: number;
   src: string;
   rating: string;
+  handleContextMenu?: (e: React.MouseEvent) => void;
+  containerClass?: string | undefined;
 };
 
 export type ImageLoaderProps = {
-  src: string;
+  src?: string;
   alt?: string;
   className?: string;
+  containerClass: string | undefined;
   onClick?: () => void;
   onContextMenu?: (e: React.MouseEvent) => void;
 };

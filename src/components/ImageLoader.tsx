@@ -9,12 +9,13 @@ export default function ImageLoader({
   className,
   onClick,
   onContextMenu,
+  containerClass,
 }: ImageLoaderProps) {
   const [loading, setLoading] = useState(true);
 
   return (
     <>
-      {loading && <SpinnerLoader />}
+      {loading && <SpinnerLoader containerClass={containerClass} />}
 
       <motion.img
         src={src}
