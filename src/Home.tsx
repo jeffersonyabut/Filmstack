@@ -30,7 +30,7 @@ export default function Home() {
           }
           const finalForm = hour / 60;
           setLastActive(
-            `Active ${finalForm - 1} hour${finalForm > 1 ? "s" : ""} ago`
+            `Active ${finalForm - 1} hour${finalForm - 1 > 1 ? "s" : ""} ago`
           );
         }
       } catch (err) {
