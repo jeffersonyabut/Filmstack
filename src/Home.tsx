@@ -75,11 +75,13 @@ export default function Home() {
             jeffszine
           </a>
         </div>
-        <div>
+        <div className="mt-2">
           {isActive ? (
             <span className="text-green-500">🟢 Active now</span>
           ) : lastActive ? (
-            <span className="text-helvetica text-sm">{lastActive}</span>
+            <span className="text-helvetica text-sm text-neutral-50/30">
+              {lastActive}
+            </span>
           ) : (
             <span>...</span>
           )}
