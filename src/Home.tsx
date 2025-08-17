@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-svh w-full xl:h-full xl:w-full bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="h-full w-full bg-gradient-to-b from-gray-900 to-gray-800">
       <div className=" text-white w-full flex flex-col  items-center">
         <ImageLoader
           containerClass="rounded-full w-32 h-32 flex items-center justify-center mt-12 xl:w-60"

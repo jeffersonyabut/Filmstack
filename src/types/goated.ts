@@ -4,6 +4,16 @@ export type graphicTypes = {
   children: React.ReactNode;
 };
 
+export interface MjsonType {
+  path: string;
+  rating: string;
+}
+
+export interface MovieJson {
+  imageData: MjsonType[];
+  handleContextMenu?: (e: React.MouseEvent) => void;
+}
+
 export type ScrollsProps = {
   scrollLeft: () => void;
   scrollRight: () => void;
