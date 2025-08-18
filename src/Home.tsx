@@ -12,7 +12,7 @@ export default function Home() {
     const fetchGitHubActivity = async () => {
       try {
         const res = await fetch(
-          "https://api.github.com/users/epoymadness/events/public"
+          "https://api.github.com/users/jeffersonyabut/events/public"
         );
         const data = await res.json();
         if (data.length > 0) {
