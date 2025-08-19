@@ -1,26 +1,26 @@
 [
   {
-    "path": "Filmstack/images/Flow.jpg",
+    "path": "images/Flow.jpg",
     "rating": "9.5"
   },
   {
-    "path": "Filmstack/images/WildRobot.jpg",
+    "path": "images/WildRobot.jpg",
     "rating": "9.5"
   },
   {
-    "path": "Filmstack/images/Elemental.jpg",
+    "path": "images/Elemental.jpg",
     "rating": "10"
   },
   {
-    "path": "Filmstack/images/Eli.jpg",
+    "path": "images/Eli.jpg",
     "rating": "10"
   },
   {
-    "path": "Filmstack/images/Raya.jpg",
+    "path": "images/Raya.jpg",
     "rating": "8.5"
   },
   {
-    "path": "Filmstack/images/Dinosaur.jpg",
+    "path": "images/Dinosaur.jpg",
     "rating": "10"
   }
 ]
