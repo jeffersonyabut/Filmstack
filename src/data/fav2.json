@@ -1,18 +1,18 @@
 [
   {
-    "path": "images/rio.jpg",
+    "path": "Filmstack/images/rio.jpg",
     "rating": "9.5"
   },
   {
-    "path": "images/ralph.jpg",
+    "path": "Filmstack/images/ralph.jpg",
     "rating": "9.5"
   },
   {
-    "path": "images/monster.jpg",
+    "path": "Filmstack/images/monster.jpg",
     "rating": "10"
   },
   {
-    "path": "images/sing.jpg",
+    "path": "Filmstack/images/sing.jpg",
     "rating": "10"
   }
 ]
