@@ -41,11 +41,9 @@ export default function Status() {
     <>
       <div className="mt-2">
         {isActive ? (
-          <span className="text-green-500">🟢 Active now</span>
+          <span className="text-green-500">DND</span>
         ) : lastActive ? (
-          <span className="text-helvetica text-sm text-neutral-50/30">
-            {lastActive}
-          </span>
+          <span className="text-helvetica text-sm text-neutral-50/30">DND</span>
         ) : (
           <span>...</span>
         )}
